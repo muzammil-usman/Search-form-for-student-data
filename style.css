@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap");
+
+* {
+  font-family: "Geist Mono", monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  list-style: none;
+  text-transform: capitalize;
+}
+.main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #243642;
+}
+.main-container {
+  perspective: 1500px;
+  gap: 50px;
+  height: 450px;
+  width: 350px;
+}
+
+#check {
+  display: none;
+}
+
+#check:checked ~ .content {
+  animation: 2s animate;
+  transform: rotateY(180deg);
+}
+
+@keyframes animate {
+  0% {
+    transform: translateZ(0px);
+  }
+  50% {
+    transform: translateZ(100px);
+  }
+  100% {
+    transform: translateY(180deg);
+  }
+}
+
+.content {
+  width: 100%;
+  height: 450px;
+  transform-style: preserve-3d;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 1s cubic-bezier(0.75, 0, 0.85, 1);
+  border-radius: 8px;
+}
+
+.front,
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  perspective: 1500px;
+  border-radius: 15px;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+.inner {
+  height: 100%;
+  padding: 1.5em;
+  transform: translateZ(80px) scale(1);
+}
+h2 {
+  position: absolute;
+  top: 50px;
+  left: 30%;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #243642;
+}
+p {
+  align-content: center;
+  padding: 7px;
+  margin-top: 70px;
+  margin-left: 35px;
+  text-align: justify;
+  line-height: 1.4em;
+  font-size: 1.2rem;
+  color: #243642;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 95%;
+  padding: 15px;
+  height: 40px;
+  margin: 12px 8px;
+  color: #3d3bf3;
+  border: 1px solid #3d3bf3;
+  outline: none;
+  border-radius: 5px;
+  &::placeholder {
+    color: #9694ff;
+  }
+}
+.front label {
+  padding: 8px 6px;
+  font-size: 14px;
+  float: right;
+  cursor: pointer;
+  &:hover {
+    color: #3d3bf3;
+  }
+}
+.back label {
+  position: absolute;
+  bottom: 35px;
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+  &:hover {
+    color: #3d3bf3;
+  }
+}
+button {
+  position: absolute;
+  right: 25%;
+  width: 55%;
+  bottom: 15%;
+  padding: 7px;
+  color: #3d3bf3;
+  background-color: #ebeaff;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  transition: 0.3s ease-in;
+  &:hover {
+    background: transparent;
+    color: #9694ff;
+    border: 1px solid black;
+  }
+}
