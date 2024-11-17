@@ -100,21 +100,22 @@ input[type="password"] {
   padding: 15px;
   height: 40px;
   margin: 12px 8px;
-  color: #3d3bf3;
-  border: 1px solid #3d3bf3;
+  color: black;
+  border: 1px solid #243642;
   outline: none;
   border-radius: 5px;
   &::placeholder {
-    color: #9694ff;
+    color: #243642;
   }
 }
 .front label {
   padding: 8px 6px;
   font-size: 14px;
   float: right;
+  color: #243642;
   cursor: pointer;
   &:hover {
-    color: #3d3bf3;
+    color: black;
   }
 }
 .back label {
@@ -122,9 +123,11 @@ input[type="password"] {
   bottom: 35px;
   width: 100%;
   font-size: 14px;
+  color: #243642;
   text-align: center;
   &:hover {
-    color: #3d3bf3;
+    color: black;
+    cursor: pointer;
   }
 }
 button {
@@ -133,17 +136,27 @@ button {
   width: 55%;
   bottom: 15%;
   padding: 7px;
-  color: #3d3bf3;
-  background-color: #ebeaff;
+  color: #243642;
+  background-color: white;
   text-align: center;
   font-size: 16px;
   border-radius: 5px;
+  border: 1px solid #243642;
   outline: none;
-  border: none;
   transition: 0.3s ease-in;
   &:hover {
     background: transparent;
-    color: #9694ff;
-    border: 1px solid black;
+    color: white;
+    cursor: pointer;
+    background-color: #243642;
   }
+}
+
+#error,
+#error2,
+#pwError2,
+#pwError {
+  color: red;
+  font-size: 12px;
+  margin-left: 20px;
 }

@@ -14,61 +14,71 @@
         <div class="content">
           <div class="front">
             <div class="inner">
-              <h2>Log in</h2>
-              <p>Hello! Welcome Back</p>
+              <h2>Search</h2>
+              <p>search students here</p>
               <input
                 type="email"
                 name="email"
-                id="email"
-                placeholder="Enter your Email"
+                id="searchEmail"
+                placeholder="Enter student email"
                 autocomplete="off"
                 required
+                oninput="atTheRateChecker(event)"
               />
+              <span id="error"></span>
               <input
                 type="password"
                 name="email"
-                id="password"
-                placeholder="Enter your Password"
+                id="searchPassword"
+                placeholder="Enter Student Password"
+                oninput="pwLengthChecker(event)"
                 required
               />
+              <span id="pwError"></span>
               <label for="check" arial-hidden="true"
-                >Looking for students?</label
+                >Don't have an account?</label
               >
-              <button type="button">Login</button>
+              <button type="button">Search Now</button>
             </div>
           </div>
 
           <div class="back">
             <div class="inner">
-              <h2>Portal</h2>
-              <p>Search any student</p>
+              <h2>sign up</h2>
+              <p>welcome to the portal</p>
               <input
                 type="email"
-                name="email"
-                id="email"
-                placeholder="Enter your Email"
+                name="name"
+                id="name"
+                placeholder="enter you name"
                 autocomplete="off"
                 required
               />
               <input
-                type="password"
+                type="email"
                 name="email"
-                id="password"
-                placeholder="Enter your Password"
+                id="signUpEmail"
+                placeholder="Enter your email"
                 required
+                oninput="atTheRateChecker(event)"
               />
+              <span id="error2"></span>
               <input
                 type="password"
                 name="email"
-                id="password"
-                placeholder="Confirm Password"
+                id="signUpPassword"
+                placeholder="enter your password"
                 required
+                oninput="pwLengthChecker(event)"
               />
+              <span id="pwError2"></span>
               <label for="check" arial-hidden="true"
-                >Dont have an account?</label
+                >looking for students?</label
               >
 
-              <button type="button">Search</button>
+              <button id="search" type="button" onclick="pushingData()">
+                Sign Up
+              </button>
             </div>
           </div>
         </div>
