@@ -20,7 +20,7 @@
                 type="email"
                 name="email"
                 id="searchEmail"
-                placeholder="Enter student email"
+                placeholder="Enter Student Email"
                 autocomplete="off"
                 required
                 oninput="atTheRateChecker(event)"
@@ -50,26 +50,28 @@
                 type="email"
                 name="name"
                 id="name"
-                placeholder="enter you name"
+                placeholder="Enter Your Name"
                 autocomplete="off"
                 required
+                oninput="nameLengthChecker(event)"
               />
+              <span id="nameError"></span>
               <input
                 type="email"
                 name="email"
                 id="signUpEmail"
-                placeholder="Enter your email"
+                placeholder="Enter Your Email"
                 required
-                oninput="atTheRateChecker(event)"
+                oninput="atTheRateChecker2(event)"
               />
               <span id="error2"></span>
               <input
                 type="password"
                 name="email"
                 id="signUpPassword"
-                placeholder="enter your password"
+                placeholder="Enter Your Password"
                 required
-                oninput="pwLengthChecker(event)"
+                oninput="pwLengthChecker2(event)"
               />
               <span id="pwError2"></span>
               <label for="check" arial-hidden="true"
