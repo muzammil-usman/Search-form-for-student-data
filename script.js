@@ -43,17 +43,38 @@ function nameLengthChecker(e) {
   nameError.style.display = "none";
 }
 
-let userData = [{}];
-
-function pushingData(e) {
-  // e.preventDefault();
+function pushingData() {
   userData.push({
-    username: namee.value,
+    name: namee.value,
     email: email.value,
     password: signUpPassword.value,
   });
+  namee.value = "";
+  email.value = "";
+  signUpPassword.value = "";
   console.log(userData);
 }
+
+function alreadyExist() {
+  for (var i in userData) {
+    if (userData[i].email === email.value) {
+      alert("Already Exist");
+    }
+  }
+}
+
+let userData = [
+  {
+    name: "Raza",
+    email: "abc@gmail.com",
+    password: "12345",
+  },
+  {
+    name: "Umer",
+    email: "def@gmail.com",
+    password: "678910",
+  },
+];
 
 let namee = document.getElementById("name");
 let email = document.getElementById("signUpEmail");
